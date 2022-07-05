@@ -30,8 +30,13 @@ $phone: 480px;
     }
 }
 
+.maincontent {
+    background: #fff;
+}
 
 .hero {
+    background: #313131;
+    color: #fff;
     height: 100vh;
     background: url(./img/background/hero-back.png) center center no-repeat;
     background-size: cover;
@@ -105,14 +110,11 @@ $phone: 480px;
         flex-shrink: 0;
         width: rem(13px);
         height: rem(15px);
+        margin-right: rem(7px);
+        fill: white;
     }
     &__text {
         white-space: nowrap;
-    }
-    &__icon-img {
-        width: rem(13px);
-        height: rem(14px);
-        margin-right: rem(5px);
     }
 }
 
@@ -353,277 +355,17 @@ $phone: 480px;
     transform: translate(-50%, -50%);
 }
 
-.container--reviews {
-    padding: rem(58px) rem(80px) rem(63px);
-}
-
-.reviews__title {
-    margin-bottom: rem(32px);
-}
-
-.review {
-    background: #F8FAF9;
-    padding: rem(42px);
-    display: flex;
-    align-items: center;
-    margin-bottom: rem(15px);
-    @include tablet {
-        flex-direction: column;
-        text-align: center;
-    }
-    &__img {
-        margin-right: rem(38px);
-        width: rem(254px);
-        height: rem(264px);
-        @include tablet {
-            margin-right: 0;
-            width: rem(130px);
-            height: rem(130px);
-            margin-bottom: rem(32px);
-        }
-    }
-    &__title {
-        font-size: rem(27px);
-        font-weight: 700;
-        margin-bottom: rem(14px);
-    }
-    &__article {
-        color: #666;
-        margin-bottom: rem(25px);
-        width: 65%;
-        @include tablet {
-            width: 100%;
-        }
-    }
-    &__name {
-        font-weight: 500;
-    }
-}
-
-.rev-switcher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &-item {
-        margin-right: rem(6px);
-        &:last-child {
-            margin-right: 0;
-        }
-        width: rem(74px);
-        height: rem(74px);
-        overflow: hidden;
-        position: relative;
-        &--active {
-            border: rem(6px) solid $yellow;
-            border-radius: 50%;
-        }
-    }
-    &-link {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: block;
-    }
-    &-img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-.section__order {
-    background: url(./img/background/order-back.png) center center no-repeat;
-    background-size: cover;
-    @include tablet {
-        background: url(./img/background/order-teblet.png) center center no-repeat;
-        background-size: cover;
-    }
-    @include phone {
-        background: url(./img/background/order-phone.png) center center no-repeat;
-        background-size: cover;
-    }
-}
-
-.container__order {
-    padding: rem(62px) rem(80px) rem(85px);
-    color: #fff;
-    @include phone {
-        padding: 0;
-    }
-}
-
-.order__title {
-    margin-bottom: rem(59px);
-}
-
-.form {
-    display: flex;
-    @include tablet {
-        flex-direction: column;
-        padding: 0 10%;
-    }
-    @include phone {
-        padding: 0 2%;
-    }
-    &__col {
-        flex: 1;
-        margin-right: rem(27px);
-        &:last-child {
-            margin-right: 0;
-        }
-        @include tablet {
-            margin-right: 0;
-        }
-    }
-    &__row {
-        display: flex;
-        margin-bottom: rem(12px);
-    }
-    &__block {
-        flex: 1;
-        margin-right: rem(15px);
-        &:last-child {
-            margin-right: 0;
-        }
-        &--name {
-            @include tablet {
-                margin-right: 23px;
-            }
-        }
-    }
-    &__input {
-        width: 100%;
-        height: 58px;
-        border: rem(3px) solid transparent;
-        border-radius: rem(4px);
-        padding: rem(18px) rem(12px);
-        @include tablet {
-            height: 36px;
-        }
-        &:focus {
-            border-color: $yellow;
-            outline: none;
-        }
-        &--textarea {
-            height: rem(152px);
-            resize: none;
-            margin-bottom: rem(30px);
-        }
-    }
-    &__controls {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    &__btns {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.radio {
-    display: flex;
-    margin-right: rem(15px);
-    cursor: pointer;
-    user-select: none;
-    margin-bottom: rem(19px);
-    &:last-child {
-        margin-right: 0;
-    }
-    &__elem {
-        display: none;
-        &:checked ~ .radio__visible {
-            &::before {
-                display: block;
-            }
-        }
-    }
-    &__visible {
-        width: rem(25px);
-        height: rem(25px);
-        position: relative;
-        background: #fff;
-        border-radius: 50%;
-        margin-right: rem(10px);
-        &:last-child {
-            margin-right: 0;
-        }
-        &::before {
-            content: "";
-            display: none;
-            width: rem(13px);
-            height: rem(13px);
-            background: $yellow;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    &--checkbox {
-        margin-bottom: 0;
-        .radio__visible {
-            border-radius: rem(4px);
-            &::before {
-                background: url(./img/SVG/icon.svg) center center no-repeat;
-            }
-        }
-        margin-bottom: rem(46px);
-    }
-}
-
-.fixed-menu {
-    position: fixed;
-    top: 34%;
-    right: 3%;
-    z-index: $z-fixed-menu;
-    &__item {
-        margin-bottom: rem(12px);
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-    &__link {
-        width: rem(18px);
-        height: rem(18px);
-        border-radius: 50%;
-        border: rem(1px) solid transparent;
-        display: block;
-        position: relative;
-        &--active {
-            border-color: #fff;
-        }
-        &::before {
-            content: "";
-            background: #fff;
-            display: block;
-            width: rem(9px);
-            height: rem(9px);
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    @include tablet {
-        display: none;
-    }
-    @include phone {
-        display: none;
-    }
-}
-
 .slider {
     background: #F8FAF9;
     color: #292929;
     &--container {
         display: flex;
         padding: rem(20px) rem(10px);
+        & .bx-wrapper {
+            border: 0;
+            box-shadow: none;
+            background: transparent;
+        }
     }
     &__arrow {
         width: 12%;
@@ -635,11 +377,14 @@ $phone: 480px;
             height: 29px;
         }
     }
-    &__content {
+    &__list {
         flex: 1;
+    }
+    &__content {
         display: flex;
         align-items: center;
         justify-content: center;
+        justify-content: stretch;
         &--photo {
             flex: 1;
             background: url("./img/SVG/background.svg") center center no-repeat;
@@ -650,6 +395,7 @@ $phone: 480px;
             }
         }
         &--desc  {
+            // max-width: 50%;
             flex: 1;
         }
         @include tablet {
@@ -808,6 +554,385 @@ $phone: 480px;
     }
 }
 
+.team {
+    text-align: center;
+    &__container {
+        padding: rem(30px) rem(80px);
+    }
+    & h2 {
+        margin-bottom: rem(53px);
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        &--mobile {
+            display: none;
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+        &--desktop {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+    &__card {
+        width: 23%;
+        @include tablet {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+    &__photo {
+        margin-bottom: rem(21px);
+    }
+    &__name {
+        font-size: rem(21px);
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        // position: relative;
+        // ::after {
+        //     content: "";
+        //     display: block;
+        //     width: 8px;
+        //     height: 7px;
+        //     background: url(./img/SVG/down.svg) center center no-repeat;
+        //     fill: black;
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        // }
+    }
+    &__desc {
+        height: 0;
+        overflow: hidden;
+        transition: height .3s;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        font-weight: 300;
+    }
+}
+
+.container--reviews {
+    padding: rem(58px) rem(80px) rem(63px);
+}
+
+.reviews__title {
+    margin-bottom: rem(32px);
+}
+
+.review {
+    background: #F8FAF9;
+    padding: rem(42px);
+    display: none;
+    align-items: center;
+    margin-bottom: rem(15px);
+    &.active {
+        display: flex;
+    }
+    @include tablet {
+        flex-direction: column;
+        text-align: center;
+    }
+    &__img {
+        margin-right: rem(38px);
+        width: rem(254px);
+        height: rem(264px);
+        @include tablet {
+            margin-right: 0;
+            width: rem(130px);
+            height: rem(130px);
+            margin-bottom: rem(32px);
+        }
+    }
+    &__title {
+        font-size: rem(27px);
+        font-weight: 700;
+        margin-bottom: rem(14px);
+    }
+    &__article {
+        color: #666;
+        margin-bottom: rem(25px);
+        width: 65%;
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &__name {
+        font-weight: 500;
+    }
+}
+
+.rev-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-item {
+        margin-right: rem(6px);
+        &:last-child {
+            margin-right: 0;
+        }
+        width: rem(74px);
+        height: rem(74px);
+        overflow: hidden;
+        position: relative;
+        &.active {
+            border: rem(6px) solid $yellow;
+            border-radius: 50%;
+        }
+    }
+    &-link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+    &-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.section__order {
+    background: url(./img/background/order-back.png) center center no-repeat;
+    background-size: cover;
+    @include tablet {
+        background: url(./img/background/order-teblet.png) center center no-repeat;
+        background-size: cover;
+    }
+    @include phone {
+        background: url(./img/background/order-phone.png) center center no-repeat;
+        background-size: cover;
+    }
+}
+
+.container__order {
+    padding: rem(62px) rem(80px) rem(85px);
+    color: #fff;
+    @include phone {
+        padding: 0;
+    }
+}
+
+.order__title {
+    margin-bottom: rem(59px);
+}
+
+.form {
+    display: flex;
+    @include tablet {
+        flex-direction: column;
+        padding: 0 10%;
+    }
+    @include phone {
+        padding: 0 2%;
+    }
+    &__col {
+        flex: 1;
+        margin-right: rem(27px);
+        &:last-child {
+            margin-right: 0;
+        }
+        @include tablet {
+            margin-right: 0;
+        }
+    }
+    &__row {
+        display: flex;
+        margin-bottom: rem(12px);
+    }
+    &__block {
+        flex: 1;
+        margin-right: rem(15px);
+        &:last-child {
+            margin-right: 0;
+        }
+        &--name {
+            @include tablet {
+                margin-right: 23px;
+            }
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 58px;
+        border: rem(3px) solid transparent;
+        border-radius: rem(4px);
+        padding: rem(18px) rem(12px);
+        @include tablet {
+            height: 36px;
+        }
+        &:focus {
+            border-color: $yellow;
+            outline: none;
+        }
+        &--textarea {
+            height: rem(152px);
+            resize: none;
+            margin-bottom: rem(30px);
+        }
+    }
+    &__controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.input--error {
+    border-color: red;
+}
+
+.radio {
+    display: flex;
+    margin-right: rem(15px);
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: rem(19px);
+    &:last-child {
+        margin-right: 0;
+    }
+    &__elem {
+        display: none;
+        &:checked ~ .radio__visible {
+            &::before {
+                display: block;
+            }
+        }
+    }
+    &__visible {
+        width: rem(25px);
+        height: rem(25px);
+        position: relative;
+        background: #fff;
+        border-radius: 50%;
+        margin-right: rem(10px);
+        &:last-child {
+            margin-right: 0;
+        }
+        &::before {
+            content: "";
+            display: none;
+            width: rem(13px);
+            height: rem(13px);
+            background: $yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &--checkbox {
+        margin-bottom: 0;
+        .radio__visible {
+            border-radius: rem(4px);
+            &::before {
+                background: url(./img/SVG/icon.svg) center center no-repeat;
+            }
+        }
+        margin-bottom: rem(46px);
+    }
+}
+
+.section__map {
+    background: url(./img/map.png) center center no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    margin-top: auto;
+    max-height: 90px;
+    padding: rem(24px) rem(80px) rem(18px) rem(80px);
+    color: #292929;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.socials {
+    display: flex;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.social {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 14px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &--vk,&--fb,&--in,&--tw {
+        fill: #B3B3B3;
+        &:hover {
+            fill: #292929;
+        }
+    }
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 34%;
+    right: 2%;
+    z-index: $z-fixed-menu;
+    &__item {
+        margin-bottom: rem(12px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        width: rem(18px);
+        height: rem(18px);
+        border-radius: 50%;
+        border: rem(1px) solid transparent;
+        display: block;
+        position: relative;
+        &--active {
+            border-color: #fff;
+        }
+        &::before {
+            content: "";
+            background: #fff;
+            display: block;
+            width: rem(9px);
+            height: rem(9px);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    @include tablet {
+        display: none;
+    }
+    @include phone {
+        display: none;
+    }
+}
+
 .fullscreen-menu {
     position: absolute;
     width: 100%;
@@ -843,5 +968,25 @@ $phone: 480px;
             margin-right: 0;
             margin-bottom: 1%;
         }
+    }
+}
+
+.modal {
+    display: none;
+    &__container {
+        background: #fff;
+        color: #000;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 310px;
+        height: 180px;
+        padding: 37px 67px;
+    }
+    &__content {
+        white-space: nowrap;
+        // margin-bottom: ;
     }
 }
