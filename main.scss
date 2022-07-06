@@ -591,23 +591,14 @@ $phone: 480px;
     &__photo {
         margin-bottom: rem(21px);
     }
-    &__name {
+    &__btn {
+        cursor: pointer;
+        // margin: 0 auto;
         font-size: rem(21px);
         font-weight: 700;
         display: flex;
         justify-content: center;
-        // position: relative;
-        // ::after {
-        //     content: "";
-        //     display: block;
-        //     width: 8px;
-        //     height: 7px;
-        //     background: url(./img/SVG/down.svg) center center no-repeat;
-        //     fill: black;
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        // }
+        align-items: center;
     }
     &__desc {
         height: 0;
@@ -621,6 +612,24 @@ $phone: 480px;
     &__text {
         font-weight: 300;
     }
+}
+
+.team__name-icon {
+    margin-left: 4px;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-top-color: #000;
+    border-bottom-width: 0;
+    border-left-width: 5px;
+    border-right-width: 5px;
+}
+
+.team__card.active .team__name-icon {
+    border-top-color: transparent;
+    border-bottom-color: #000;
+    border-bottom-width: 9px;
+    border-top-width: 0;
 }
 
 .container--reviews {

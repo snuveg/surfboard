@@ -522,11 +522,13 @@ p {
         margin-bottom: 16px; } }
   .team__photo {
     margin-bottom: 1.1666666667rem; }
-  .team__name {
+  .team__btn {
+    cursor: pointer;
     font-size: 1.1666666667rem;
     font-weight: 700;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
   .team__desc {
     height: 0;
     overflow: hidden;
@@ -536,6 +538,22 @@ p {
     flex-direction: column; }
   .team__text {
     font-weight: 300; }
+
+.team__name-icon {
+  margin-left: 4px;
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+  border-top-color: #000;
+  border-bottom-width: 0;
+  border-left-width: 5px;
+  border-right-width: 5px; }
+
+.team__card.active .team__name-icon {
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-width: 9px;
+  border-top-width: 0; }
 
 .container--reviews {
   padding: 3.2222222222rem 4.4444444444rem 3.5rem; }

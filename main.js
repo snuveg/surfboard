@@ -28,7 +28,7 @@ const findData = (datars) => {
 };
 /////////////////
 
-$(".team__name").on("click", (e) => {
+$(".team__btn").on("click", (e) => {
   e.preventDefault();
 
   const $this = $(e.currentTarget);
