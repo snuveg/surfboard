@@ -16,23 +16,23 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <section class="hero">
-        <div class="hero__container container">
+      <section class="section hero__section" data-section="hero" data-sidemenu="white">
+        <div class="container hero__container">
           <header class="header">
             <a href="/" class="logo"><svg class="logo-icon" viewBox="0 0 56 40"><use xlink:href="./img/sprite.svg#logo"></use></svg></a>
             <nav class="menu menu-horizontal">
               <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Серфборды</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Меню</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Какмы работаем</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="about">О нас</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="slider">Серфборды</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="team">Команда</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="products">Меню</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="reviews">Отзывы</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="work">Как мы работаем</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" data-to="map">Контакты</a></li>
               </ul>
             </nav>
             <a href="tel:+78009039090" class="phone header__phone">
-              <span class="phone__icon"><svg class="phone__icon-img"><use xlink:href="./img/sprite.svg#phone"></use></svg></span>
+              <span class="phone__icon"><svg class="phone__icon-img" viewBox="0 0 13 15"><use xlink:href="./img/sprite.svg#phone"></use></svg></span>
               <span class="phone__text">8 800 903 90 90</span>
             </a>
             <a href="#" class="hamburger">
@@ -42,9 +42,9 @@
             </a>
           </header>
           <div class="main">
-            <h1 class="main-title">Профессиональные доски для серфинга</h1>
+            <h1 class="main-title section__title">Профессиональные доски для серфинга</h1>
             <div class="main-text">Самый большой выбор серфбордов в мире</div>
-            <a href="#" class="btn">заказать</a>
+            <a href="#" class="btn" data-to="order">заказать</a>
           </div>
           <div class="features">
             <ul class="features__list">
@@ -64,8 +64,8 @@
           </div>
         </div>
       </section>
-      <section class="section about">
-        <div class="container container--about">
+      <section class="section about__section" data-section="about" data-sidemenu="black">
+        <div class="container about__container">
           <div class="headline">
             <h2 class="headline__title section__title">почему Surfboard?</h2>
             <div class="headline__subtitle">Мы создаем уникальные и качественные доски из прочных и экологичных материалов.</div>
@@ -95,8 +95,8 @@
           </div>
         </div>
       </section>
-      <section class="slider">
-        <div class="container slider--container">
+      <section class="section slider__section" data-section="slider" data-sidemenu="black">
+        <div class="container slider__container">
           <div class="slider__arrow">
             <a href="#" class="slider__arrow--btn"><svg class="slider__arrow--left" viewBox="0 0 15 29"><use xlink:href="./img/sprite.svg#left"></use></svg></a>
           </div>
@@ -167,7 +167,7 @@
                   </div>
                   <div class="desc__inner--order order">
                     <div class="order__price">7000 ₽</div>
-                    <div class="order__btn"><a href="#" class="btn">заказать</a></div>
+                    <div class="order__btn"><a href="#" class="btn" data-to="order">заказать</a></div>
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@
                   </div>
                   <div class="desc__inner--order order">
                     <div class="order__price">12000 ₽</div>
-                    <div class="order__btn"><a href="#" class="btn">заказать</a></div>
+                    <div class="order__btn"><a href="#" class="btn" data-to="order">заказать</a></div>
                   </div>
                 </div>
               </div>
@@ -251,14 +251,13 @@
           </div>
         </div>
       </section>
-      <section class="section team">
+      <section class="section team__section" data-section="team" data-sidemenu="black">
         <div class="container team__container">
           <h2 class="team__title section__title">Команда</h2>
           <ul class="team__list team__list--desktop">
             <li class="team__card">
               <div class="team__photo"><img src="./img/team/photo1.png" alt="photo1" class="team__photo-img"></div>
               <div class="team__btn">
-                <!-- <a href="#" class="team__name">Борис Федорович</a> -->
                 <span class="team__name">Борис Федорович</span>
                 <span class="team__name-icon"></span>
               </div>
@@ -365,8 +364,54 @@
           </ul>
         </div>
       </section>
-      <section class="section reviews">
-        <div class="container cintainer--reviews">
+      <section class="section products__section" data-section="products" data-sidemenu="white">
+        <div class="container products__container">
+          <h2 class="products__title section__title">меню</h2>
+          <ul class="products__menu">
+            <li class="products__item product">
+              <a href="#" class="product__title">
+                <img src="./img/products/prod-slide1.png" alt="prod1" class="product__img">
+                <div class="product__text">Лонгборды</div>
+              </a>
+              <div class="product__desc">
+                <div class="product__desc-inner">
+                  <p>
+                    Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="products__item product">
+              <a href="#" class="product__title">
+                <img src="./img/products/prod-slide2.png" alt="prod1" class="product__img">
+                <div class="product__text">Шортборды</div>
+              </a>
+              <div class="product__desc">
+                <div class="product__desc-inner">
+                  <p>
+                    Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="products__item product">
+              <a href="#" class="product__title">
+                <img src="./img/products/prod-slide3.png" alt="prod1" class="product__img">
+                <div class="product__text">Софттопы</div>
+              </a>
+              <div class="product__desc">
+                <div class="product__desc-inner">
+                  <p>
+                    Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section reviews__section" data-section="reviews" data-sidemenu="black">
+        <div class="container reviews__cintainer">
           <h2 class="section__title reviews__title">отзывы</h2>
           <ul class="reviews__list">
             <li class="reviews__item review active" data-rb="one">
@@ -413,8 +458,33 @@
           </ul>
         </div>
       </section>
-      <section class="section section__order">
-        <div class="container container__order">
+      <section class="section work__section" data-section="work" data-sidemenu="black">
+        <div class="container work__container">
+          <h2 class="section__title work__title">как мы работаем</h2>
+          <div class="player">
+            <div class="player__wrapper">
+              <div class="player__elem" id="ytb"></div>
+              <div class="player__splash"></div>
+            </div>
+            <div class="player__controls controls">
+              <svg class="controls__start-btn" viewBox="0 0 12 17" fill="#fff"><use xlink:href="./img/sprite.svg#play"></use></svg>
+              <div class="controls__playback">
+                <svg class="controls__playback-bar" viewBox="0 0 446 7" fill="#626262"><use xlink:href="./img/sprite.svg#bar"></use></svg>
+                <svg class="controls__playback-bar--yello" viewBox="0 0 446 7" fill="#FEDB3F" preserveAspectRatio="xMidYMid slice"><use xlink:href="./img/sprite.svg#bar"></use></svg>
+                <svg class="controls__playback-point" viewBox="0 0 15 15" fill="#FEDB3F"><use xlink:href="./img/sprite.svg#point"></use></svg>
+              </div>
+              <svg class="controls__speaker-btn" viewBox="0 0 14 17" fill="#fff"><use xlink:href="./img/sprite.svg#speaker"></use></svg>
+              <div class="controls__sound">
+                <svg class="controls__sound-bar" viewBox="0 0 58 7" fill="#626262"><use xlink:href="./img/sprite.svg#bars"></use></svg>
+                <svg class="controls__sound-bar--yello" viewBox="0 0 58 7" fill="#FEDB3F" preserveAspectRatio="xMidYMid slice"><use xlink:href="./img/sprite.svg#bars"></use></svg>
+                <svg class="controls__sound-point" viewBox="0 0 15 15" fill="#FEDB3F"><use xlink:href="./img/sprite.svg#point"></use></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section order__section" data-section="order" data-sidemenu="white">
+        <div class="container order__container">
           <h2 class="section__title order__title">закажите доставку</h2>
           <form class="form">
             <input type="hidden" class="hidden" name="to" value="mail@server.com">
@@ -488,61 +558,58 @@
           </form>
         </div>
       </section>
-      <section class="section section__map">
-        <div class="container container__map">
-        </div>
+      <section class="section map__section" data-section="map" data-sidemenu="black">
+        <div class="container map__container" id="map"></div>
+        <footer class="footer">
+            <div class="contacts footer__contacts">
+              <span class="contacts__address">Москва, ул.Новый Арбат, д.31/12</span>
+              <a href="tel:+78009039090" class="phone footer__phone">
+                <span class="phone__icon"><svg class="phone__icon-img" stroke="#292929" fill="#292929"><use xlink:href="./img/sprite.svg#phone"></use></svg></span>
+                <span class="phone__text">8 800 903 90 90</span>
+              </a>
+            </div>
+            <ul class="socials">
+              <li class="social"><a href="#" class="social__link">
+                <svg class="social--vk" viewBox="0 0 20 12">
+                  <use xlink:href="./img/sprite.svg#vk"></use></svg></a></li>
+              <li class="social"><a href="#" class="social__link">
+                <svg class="social--fb" viewBox="0 0 20 20">
+                  <use xlink:href="./img/sprite.svg#fb"></use></svg></a></li>
+              <li class="social"><a href="#" class="social__link">
+                <svg class="social--fb" viewBox="0 0 20 20">
+                  <use xlink:href="./img/sprite.svg#in"></use></svg></a></li>
+              <li class="social"><a href="#" class="social__link">
+                <svg class="social--fb" viewBox="0 0 20 18">
+                  <use xlink:href="./img/sprite.svg#tw"></use></svg></a></li>
+            </ul>
+        </footer>
       </section>
-      <footer class="footer">
-        <ul class="container footer__container">
-          <div class="contacts">
-            <span class="contacts__address">Москва, ул.Новый Арбат, д.31/12</span>
-            <a href="tel:+78009039090" class="phone header__phone">
-              <span class="phone__icon"><svg class="phone_icon-img" stroke="#292929" fill="#292929"><use xlink:href="./img/sprite.svg#phone"></use></svg></span>
-              <span class="phone__text">8 800 903 90 90</span>
-            </a>
-          </div>
-          <ul class="socials">
-            <li class="social"><a href="#" class="social__link">
-              <svg class="social--vk" viewBox="0 0 20 12">
-                <use xlink:href="./img/sprite.svg#vk"></use></svg></a></li>
-            <li class="social"><a href="#" class="social__link">
-              <svg class="social--fb" viewBox="0 0 20 20">
-                <use xlink:href="./img/sprite.svg#fb"></use></svg></a></li>
-            <li class="social"><a href="#" class="social__link">
-              <svg class="social--fb" viewBox="0 0 20 20">
-                <use xlink:href="./img/sprite.svg#in"></use></svg></a></li>
-            <li class="social"><a href="#" class="social__link">
-              <svg class="social--fb" viewBox="0 0 20 18">
-                <use xlink:href="./img/sprite.svg#tw"></use></svg></a></li>
-          </ul>
-        </div>
-      </footer>
     </div>
   </div>
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link fixed-menu__link--active"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-      <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item fixed-menu__item--active" data-to="hero"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="about"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="slider"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="team"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="products"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="reviews"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="work"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="order"><a href="#" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item" data-to="map"><a href="#" class="fixed-menu__link"></a></li>
     </ul>
   </nav>
   <div class="fullscreen-menu">
     <a href="#" class="fullscreen-menu__close"><svg class="fullscreen-menu__close-icon" viewBox="0 0 20 20"><use xlink:href="./img/sprite.svg#x"></use></svg></a>
     <nav class="menu menu--vertical">
       <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Серфборды</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Меню</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Какмы работаем</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="about">О нас</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="slider">Серфборды</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="team">Команда</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="products">Меню</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="reviews">Отзывы</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="work">Как мы работаем</a></li>
+        <li class="menu__item"><a href="#" class="menu__link" data-to="map">Контакты</a></li>
       </ul>
     </nav>
   </div>
@@ -559,6 +626,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./jquery.touchSwipe.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="./main.js"></script>
 </body>
 </html>

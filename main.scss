@@ -13,60 +13,90 @@ $phone: 480px;
 .wrapper {
     position: relative;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
 }
-  
+
+.maincontent {
+    background: #fff;
+    height: 100%;
+    transition: .5s;
+}
+
+
+.section {
+    height: 100%;
+    min-height: rem(652px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    color: #292929;
+
+    &__title {
+        font-size: rem(48px);
+        line-height: rem(58px);
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
 .container {
     max-width: $containerWidth;
     width: 95%;
     margin: 0 auto;
     min-height: 652px;
+
     @include tablet {
         width: 100%;
     }
+
     @include phone {
         width: 100%;
     }
-}
-
-.maincontent {
-    background: #fff;
 }
 
 .hero {
-    background: #313131;
-    color: #fff;
-    height: 100vh;
-    background: url(./img/background/hero-back.png) center center no-repeat;
-    background-size: cover;
-    @include tablet {
-        background: #1968B1;
+    &__section {
+        background: #313131;
+        color: #fff;
+        background: url(./img/background/hero-back.png) center center no-repeat;
+        background-size: cover;
+
+        @include tablet {
+            background: #1968B1;
+        }
+
+        @include phone {
+            background: #1968B1;
+        }
     }
-    @include phone {
-        background: #1968B1;
-    }
+
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
         padding: rem(28px) rem(80px) rem(64px);
+
         @include tablet {
             padding: 0;
         }
+
         @include phone {
             padding: 0;
         }
     }
 }
-    
+
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 700;
+
     @include tablet {
         padding: rem(10px) rem(25px);
         background: #1968B1;
@@ -85,18 +115,22 @@ $phone: 480px;
             display: none;
         }
     }
+
     &__list {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     &__item {
         margin-right: rem(22px);
+
         &:last-child {
             margin-right: 0;
         }
     }
+
     &__link {
         white-space: nowrap;
     }
@@ -106,13 +140,20 @@ $phone: 480px;
     font-size: rem(22px);
     display: flex;
     align-items: center;
+
     &__icon {
         flex-shrink: 0;
-        width: rem(13px);
-        height: rem(15px);
         margin-right: rem(7px);
         fill: white;
+        display: flex;
+
+        &-img {
+            align-self: center;
+            width: 13px;
+            height: 15px;
+        }
     }
+
     &__text {
         white-space: nowrap;
     }
@@ -123,15 +164,18 @@ $phone: 480px;
         display: none;
     }
 }
+
 .hamburger {
     display: none;
     width: 26px;
     height: 24px;
+
     @include tablet {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
     &__block {
         background: #fff;
         height: 4px;
@@ -142,6 +186,7 @@ $phone: 480px;
 
 .main {
     width: 52%;
+
     @include tablet {
         width: 100%;
         text-align: center;
@@ -153,33 +198,38 @@ $phone: 480px;
         background: url(./img/background/hero-tablet.png) center center no-repeat;
         background-size: cover;
     }
+
     @include phone {
         background: url(./img/background/hero-phone.png) center center no-repeat;
         background-size: cover;
     }
+
     &-title {
-        font-size: rem(48px);
-        line-height: rem(58px);
-        font-weight: 700;
+        text-align: left;
         margin-bottom: rem(17px);
-        text-transform: uppercase;
+
         @include tablet {
             margin-bottom: rem(9px);
+            text-align: center;
         }
+
         @include phone {
             font-size: rem(40px);
         }
     }
+
     &-text {
         font-size: rem(21px);
         line-height: rem(25px);
         margin-bottom: rem(39px);
     }
 }
+
 .features {
-    @include  tablet {
+    @include tablet {
         display: none;
     }
+
     &__list {
         display: flex;
     }
@@ -189,19 +239,23 @@ $phone: 480px;
     display: flex;
     align-items: center;
     margin-right: rem(33px);
+
     &:last-child {
         margin-right: 0;
     }
+
     &__icon {
         display: flex;
         align-items: center;
         width: rem(35px);
         height: rem(35px);
         margin-right: rem(14px);
+
         &:last-child {
             margin-right: 0;
         }
     }
+
     &__text {
         max-width: rem(90px);
         font-size: rem(16px);
@@ -222,12 +276,15 @@ $phone: 480px;
     font-weight: 800;
     padding: rem(21px) rem(41px);
     cursor: pointer;
+
     &:hover {
         background: #FFD517;
     }
+
     &--clear {
         background: transparent;
         color: #fff;
+
         &:hover {
             background: transparent;
             color: $yellow;
@@ -235,25 +292,9 @@ $phone: 480px;
     }
 }
 
-.section {
-    height: 100vh;
-    min-height: rem(652px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #fff;
-    color: #292929;
-    &__title {
-        font-size: rem(48px);
-        font-weight: 700;
-        line-height: rem(58px);
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-
-.container--about {
+.about__container {
     padding: rem(107px) rem(80px) rem(114px);
+
     @include tablet {
         padding: rem(10px);
     }
@@ -261,47 +302,59 @@ $phone: 480px;
 
 .headline {
     text-align: center;
-    &__title  {
+
+    &__title {
         margin-bottom: rem(17px);
     }
+
     &__subtitle {
         color: #666;
         padding: 0 22%;
         margin-bottom: rem(49px);
+
         @include tablet {
             padding: 0 10%;
         }
     }
+
     &__benefits {
         display: flex;
         justify-content: space-between;
+
         @include phone {
             flex-direction: column;
         }
     }
+
     &__benefit {
         flex: 1;
         padding: 0 2%;
         position: relative;
+
         @include phone {
             padding: 0;
         }
+
         &::before {
             content: url(./img/SVG/sep.svg);
             position: absolute;
             top: rem(54px);
             right: 0;
             transform: translate(50%);
+
             @include phone {
                 display: none;
             }
 
         }
+
         &:first-child {
             padding-left: 0;
         }
+
         &:last-child {
             padding-right: 0;
+
             &::before {
                 display: none;
             }
@@ -311,11 +364,13 @@ $phone: 480px;
 
 .benefit {
     text-align: center;
+
     @include phone {
         display: flex;
         margin-bottom: rem(30px);
         text-align: left;
     }
+
     &__img {
         display: inline-block;
         width: rem(128px);
@@ -325,6 +380,7 @@ $phone: 480px;
         position: relative;
         overflow: hidden;
         margin-bottom: rem(20px);
+
         @include phone {
             // display: flex;
             margin-bottom: 0;
@@ -332,21 +388,26 @@ $phone: 480px;
             flex-shrink: 0;
         }
     }
+
     &__desc {
         align-items: center;
     }
+
     &__title {
         font-size: rem(27px);
         font-weight: 700;
         color: #292929;
         margin-bottom: rem(20px);
+
         @include phone {
             margin-bottom: rem(10px);
         }
     }
 }
 
-.fit-icon,.strong-icon,.unique-icon {
+.fit-icon,
+.strong-icon,
+.unique-icon {
     width: rem(68px);
     height: rem(68px);
     position: absolute;
@@ -356,48 +417,61 @@ $phone: 480px;
 }
 
 .slider {
-    background: #F8FAF9;
-    color: #292929;
-    &--container {
+    &__section {
+        background: #F8FAF9;
+        color: #292929;
+    }
+
+    &__container {
         display: flex;
         padding: rem(20px) rem(10px);
+
         & .bx-wrapper {
             border: 0;
             box-shadow: none;
             background: transparent;
         }
     }
+
     &__arrow {
         width: 12%;
         align-self: center;
         display: flex;
         justify-content: center;
-        &--left,&--right {
+
+        &--left,
+        &--right {
             width: 15px;
             height: 29px;
         }
     }
+
     &__list {
         flex: 1;
     }
+
     &__content {
         display: flex;
         align-items: center;
         justify-content: center;
         justify-content: stretch;
+
         &--photo {
             flex: 1;
             background: url("./img/SVG/background.svg") center center no-repeat;
             margin-right: 10%;
             background-size: contain;
+
             @include tablet {
                 margin-right: 0;
             }
         }
-        &--desc  {
+
+        &--desc {
             // max-width: 50%;
             flex: 1;
         }
+
         @include tablet {
             flex-direction: column;
             text-align: center;
@@ -408,17 +482,20 @@ $phone: 480px;
 .desc {
     display: flex;
     flex-direction: column;
+
     &__para {
         width: 91px;
         height: 91px;
         background: #3A587E;
         border-radius: 4px;
+
         &--logo {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
         }
+
         margin-bottom: rem(52px);
 
         &--pic {
@@ -426,28 +503,36 @@ $phone: 480px;
             width: 38px;
             height: 38px;
         }
+
         &--text {
             color: #fff;
             margin-bottom: 5px;
 
         }
+
         @include tablet {
             display: none;
         }
     }
+
     &__title {
         font-size: rem(36px);
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: rem(24px);
         white-space: nowrap;
+
         @include tablet {
             font-size: rem(30px);
-        };
+        }
+
+        ;
     }
+
     &__inner {
         display: flex;
         flex-direction: column;
+
         &--text {
             padding: rem(6px);
             color: #666666;
@@ -458,6 +543,7 @@ $phone: 480px;
 
 .dropdown {
     position: relative;
+
     &__menu {
         width: 273px;
         height: 291px;
@@ -475,10 +561,12 @@ $phone: 480px;
         opacity: 0;
         transition: opacity .5s;
     }
-    &:hover .dropdown__menu{
+
+    &:hover .dropdown__menu {
         left: 91px;
         opacity: 0.95;
     }
+
     &__menu:before {
         content: "";
         display: block;
@@ -497,14 +585,17 @@ $phone: 480px;
         justify-content: space-between;
         height: 100%;
     }
+
     &__item {
         display: flex;
     }
+
     &__pic {
         width: 24px;
         height: 24px;
         margin-right: rem(15px);
     }
+
     &__text {
         width: 100%;
         display: flex;
@@ -517,16 +608,20 @@ $phone: 480px;
     display: flex;
     color: #666666;
     justify-content: center;
+
     &__length {
         margin-right: rem(50px);
         margin-bottom: rem(24px);
+
         &--size {
             font-weight: 700;
         }
     }
+
     &__width--size {
         font-weight: 700;
     }
+
     @include tablet {
         text-align: left;
     }
@@ -535,38 +630,49 @@ $phone: 480px;
 .order {
     display: flex;
     align-items: center;
+
     &__price {
         margin-right: rem(28px);
         font-size: rem(60px);
         font-weight: 300;
         white-space: nowrap;
+
         @include tablet {
             flex: 1;
         }
     }
+
     &__btn {
         @include tablet {
             flex: 1;
         }
     }
+
     @include tablet {
         justify-content: center
     }
 }
 
 .team {
-    text-align: center;
+    &__section {
+        text-align: center;
+    }
+
     &__container {
         padding: rem(30px) rem(80px);
     }
+
     & h2 {
         margin-bottom: rem(53px);
     }
+
     &__list {
         display: flex;
         justify-content: space-between;
+
         &--mobile {
             display: none;
+
             @include tablet {
                 display: flex;
                 flex-direction: column;
@@ -575,22 +681,27 @@ $phone: 480px;
                 white-space: nowrap;
             }
         }
+
         &--desktop {
             @include tablet {
                 display: none;
             }
         }
     }
+
     &__card {
         width: 23%;
+
         @include tablet {
             width: 100%;
             margin-bottom: 16px;
         }
     }
+
     &__photo {
         margin-bottom: rem(21px);
     }
+
     &__btn {
         cursor: pointer;
         // margin: 0 auto;
@@ -600,15 +711,18 @@ $phone: 480px;
         justify-content: center;
         align-items: center;
     }
+
     &__desc {
         height: 0;
         overflow: hidden;
         transition: height .3s;
     }
+
     &__content {
         display: flex;
         flex-direction: column;
     }
+
     &__text {
         font-weight: 300;
     }
@@ -623,6 +737,7 @@ $phone: 480px;
     border-bottom-width: 0;
     border-left-width: 5px;
     border-right-width: 5px;
+    transition: .3s;
 }
 
 .team__card.active .team__name-icon {
@@ -632,12 +747,94 @@ $phone: 480px;
     border-top-width: 0;
 }
 
-.container--reviews {
-    padding: rem(58px) rem(80px) rem(63px);
+.products {
+    &__section {
+        background: url(./img/background/product.png) center center no-repeat;
+        background-size: cover;
+        background-color: #000;
+        color: #fff;
+    }
+
+    &__container {
+        position: relative;
+        height: 100%;
+        margin: 0;
+    }
+
+    &__title {
+        text-align: start;
+        margin-top: rem(109px);
+        margin-left: rem(84px);
+    }
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        // left: 72%;
+        display: flex;
+        height: 100%;
+    }
 }
 
-.reviews__title {
-    margin-bottom: rem(32px);
+.product {
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    &__title {
+        width: rem(102px);
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: rem(48px);
+        font-weight: 700;
+        text-align: left;
+        width: rem(102px);
+        padding-right: rem(17px);
+        padding-top: rem(39px);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    &__desc {
+        overflow: hidden;
+        width: 0;
+        transition: .3s;
+    }
+
+    &__desc-inner {
+        padding-top: rem(31px);
+        padding-left: rem(38px);
+        padding-right: rem(80px);
+        background: rgba(51, 53, 55, 0.9);
+        backdrop-filter: blur(10px);
+        height: 100%;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+}
+
+.product.active .product__desc-inner {
+    opacity: 1;
+}
+
+.reviews {
+    &__container {
+        padding: rem(58px) rem(80px) rem(63px);
+    }
+
+    &__title {
+        margin-bottom: rem(32px);
+    }
 }
 
 .review {
@@ -646,17 +843,21 @@ $phone: 480px;
     display: none;
     align-items: center;
     margin-bottom: rem(15px);
+
     &.active {
         display: flex;
     }
+
     @include tablet {
         flex-direction: column;
         text-align: center;
     }
+
     &__img {
         margin-right: rem(38px);
         width: rem(254px);
         height: rem(264px);
+
         @include tablet {
             margin-right: 0;
             width: rem(130px);
@@ -664,19 +865,23 @@ $phone: 480px;
             margin-bottom: rem(32px);
         }
     }
+
     &__title {
         font-size: rem(27px);
         font-weight: 700;
         margin-bottom: rem(14px);
     }
+
     &__article {
         color: #666;
         margin-bottom: rem(25px);
         width: 65%;
+
         @include tablet {
             width: 100%;
         }
     }
+
     &__name {
         font-weight: 500;
     }
@@ -686,20 +891,25 @@ $phone: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     &-item {
         margin-right: rem(6px);
+
         &:last-child {
             margin-right: 0;
         }
+
         width: rem(74px);
         height: rem(74px);
         overflow: hidden;
         position: relative;
+
         &.active {
             border: rem(6px) solid $yellow;
             border-radius: 50%;
         }
     }
+
     &-link {
         position: absolute;
         top: 0;
@@ -708,6 +918,7 @@ $phone: 480px;
         right: 0;
         display: block;
     }
+
     &-img {
         display: block;
         width: 100%;
@@ -716,90 +927,208 @@ $phone: 480px;
     }
 }
 
-.section__order {
-    background: url(./img/background/order-back.png) center center no-repeat;
-    background-size: cover;
-    @include tablet {
-        background: url(./img/background/order-teblet.png) center center no-repeat;
-        background-size: cover;
+.work {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 218px 52px;
     }
-    @include phone {
-        background: url(./img/background/order-phone.png) center center no-repeat;
-        background-size: cover;
-    }
-}
-
-.container__order {
-    padding: rem(62px) rem(80px) rem(85px);
-    color: #fff;
-    @include phone {
-        padding: 0;
+    &__title {
+        margin-bottom: rem(31px);
     }
 }
 
-.order__title {
-    margin-bottom: rem(59px);
+.player {
+    position: relative;
+    &__wrapper {
+        position: relative;
+    }
+    &__splash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./img/player.png) center center no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
+.controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 662px;
+    height: 35px;
+    background: #404040;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    &__start-btn {
+        width: 12px;
+        height: 17px;
+        align-self: center;
+        cursor: pointer;
+    }
+    &__playback {
+        position: relative;
+        cursor: pointer;
+        &-bar {
+            width: 446px;
+            height: 7px;
+            &--yello {
+                position: absolute;
+                left: 0;
+                top: 10.5px;
+                width: 0;
+                height: 7px;
+            }
+        }
+        &-point {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 0;
+            top: 6.5px;
+        }
+    }
+    &__speaker-btn {
+        width: 14px;
+        height: 17px;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__sound {
+        position: relative;
+        cursor: pointer;
+        &-bar {
+            width: 58px;
+            height: 7px;
+            &--yello {
+                position: absolute;
+                left: 0;
+                top: 10.5px;
+                width: 29px;
+                height: 7px;
+            }
+        }
+        &-point {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: calc(50% - 7.5px);
+            top: 6.5px;
+        }
+    }
+}
+
+.order {
+    &__section {
+        background: url(./img/background/order-back.png) center center no-repeat;
+        background-size: cover;
+
+        @include tablet {
+            background: url(./img/background/order-teblet.png) center center no-repeat;
+            background-size: cover;
+        }
+
+        @include phone {
+            background: url(./img/background/order-phone.png) center center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__container {
+        padding: rem(62px) rem(80px) rem(85px);
+        color: #fff;
+
+        @include phone {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(59px);
+    }
 }
 
 .form {
     display: flex;
+
     @include tablet {
         flex-direction: column;
         padding: 0 10%;
     }
+
     @include phone {
         padding: 0 2%;
     }
+
     &__col {
         flex: 1;
         margin-right: rem(27px);
+
         &:last-child {
             margin-right: 0;
         }
+
         @include tablet {
             margin-right: 0;
         }
     }
+
     &__row {
         display: flex;
         margin-bottom: rem(12px);
     }
+
     &__block {
         flex: 1;
         margin-right: rem(15px);
+
         &:last-child {
             margin-right: 0;
         }
+
         &--name {
             @include tablet {
                 margin-right: 23px;
             }
         }
     }
+
     &__input {
         width: 100%;
         height: 58px;
         border: rem(3px) solid transparent;
         border-radius: rem(4px);
         padding: rem(18px) rem(12px);
+
         @include tablet {
             height: 36px;
         }
+
         &:focus {
             border-color: $yellow;
             outline: none;
         }
+
         &--textarea {
             height: rem(152px);
             resize: none;
             margin-bottom: rem(30px);
         }
     }
+
     &__controls {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     &__btns {
         display: flex;
         justify-content: center;
@@ -816,17 +1145,21 @@ $phone: 480px;
     cursor: pointer;
     user-select: none;
     margin-bottom: rem(19px);
+
     &:last-child {
         margin-right: 0;
     }
+
     &__elem {
         display: none;
-        &:checked ~ .radio__visible {
+
+        &:checked~.radio__visible {
             &::before {
                 display: block;
             }
         }
     }
+
     &__visible {
         width: rem(25px);
         height: rem(25px);
@@ -834,9 +1167,11 @@ $phone: 480px;
         background: #fff;
         border-radius: 50%;
         margin-right: rem(10px);
+
         &:last-child {
             margin-right: 0;
         }
+
         &::before {
             content: "";
             display: none;
@@ -850,32 +1185,64 @@ $phone: 480px;
             transform: translate(-50%, -50%);
         }
     }
+
     &--checkbox {
         margin-bottom: 0;
+
         .radio__visible {
             border-radius: rem(4px);
+
             &::before {
                 background: url(./img/SVG/icon.svg) center center no-repeat;
             }
         }
+
         margin-bottom: rem(46px);
     }
 }
 
-.section__map {
-    background: url(./img/map.png) center center no-repeat;
-    background-size: cover;
+.map__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.map__container {
+    flex: 1;
+    width: 100%;
+    // height: calc(100% - 90px);
+    margin: 0;
+    max-width: none;
 }
 
 .footer {
     margin-top: auto;
     max-height: 90px;
-    padding: rem(24px) rem(80px) rem(18px) rem(80px);
+    padding: rem(17px) rem(80px) rem(18px) rem(80px);
     color: #292929;
-    &__container {
-        display: flex;
-        justify-content: space-between;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+        min-height: 151px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 21px;
     }
+    &__contacts {
+        .contacts__address {
+            @include tablet {
+                margin-bottom: 12px;
+            }
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    }
+    
 }
 
 .socials {
@@ -889,11 +1256,17 @@ $phone: 480px;
     height: 20px;
     cursor: pointer;
     margin-right: 14px;
+
     &:last-child {
         margin-right: 0;
     }
-    &--vk,&--fb,&--in,&--tw {
+
+    &--vk,
+    &--fb,
+    &--in,
+    &--tw {
         fill: #B3B3B3;
+
         &:hover {
             fill: #292929;
         }
@@ -903,14 +1276,17 @@ $phone: 480px;
 .fixed-menu {
     position: fixed;
     top: 34%;
-    right: 2%;
+    right: 3%;
     z-index: $z-fixed-menu;
+
     &__item {
         margin-bottom: rem(12px);
+
         &:last-child {
             margin-bottom: 0;
         }
     }
+
     &__link {
         width: rem(18px);
         height: rem(18px);
@@ -918,9 +1294,6 @@ $phone: 480px;
         border: rem(1px) solid transparent;
         display: block;
         position: relative;
-        &--active {
-            border-color: #fff;
-        }
         &::before {
             content: "";
             background: #fff;
@@ -932,11 +1305,26 @@ $phone: 480px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition: .5s;
         }
     }
+    &__item--active .fixed-menu__link {
+        border-color: #fff;
+    }
+
+    &--black {
+        .fixed-menu__link:before {
+           background: #000;
+       }
+        .fixed-menu__item--active .fixed-menu__link {
+        border-color: #000;
+    }
+   }
+
     @include tablet {
         display: none;
     }
+
     @include phone {
         display: none;
     }
@@ -956,11 +1344,13 @@ $phone: 480px;
     padding: rem(42px);
     font-size: rem(36px);
     line-height: rem(72px);
+
     &__close {
         align-self: flex-end;
+
         &-icon {
-        width: 20px;
-        height: 20px;
+            width: 20px;
+            height: 20px;
         }
     }
 }
@@ -968,11 +1358,13 @@ $phone: 480px;
 .menu--vertical {
     width: 100%;
     height: 100%;
+
     & .menu {
-        &__list{
-        flex-direction: column;
-        text-align: center;
+        &__list {
+            flex-direction: column;
+            text-align: center;
         }
+
         &__item {
             margin-right: 0;
             margin-bottom: 1%;
@@ -982,6 +1374,7 @@ $phone: 480px;
 
 .modal {
     display: none;
+
     &__container {
         background: #fff;
         color: #000;
@@ -994,6 +1387,7 @@ $phone: 480px;
         height: 180px;
         padding: 37px 67px;
     }
+
     &__content {
         white-space: nowrap;
         // margin-bottom: ;
