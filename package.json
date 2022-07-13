@@ -1,10 +1,10 @@
 {
   "name": "surfboard",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
-  "main": "main.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulp"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,12 @@
   "homepage": "https://github.com/snuveg/surfboard#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-rm": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.53.0"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
