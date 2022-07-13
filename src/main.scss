@@ -1,4 +1,4 @@
-@import "./CSS/normalize.css";
+@import "./styles/normalize.css";
 
 $containerWidth: 1100px;
 $yellow: #FEDB3F;
@@ -7,8 +7,8 @@ $baseFontSize: 18px;
 $tablet: 768px;
 $phone: 480px;
 
-@import "./CSS/_media.scss";
-@import "./CSS/_layout.scss";
+@import "./styles/_media.scss";
+@import "./styles/_layout.scss";
 
 .wrapper {
     position: relative;
@@ -759,6 +759,8 @@ $phone: 480px;
         position: relative;
         height: 100%;
         margin: 0;
+        width: auto;
+        max-width: none;
     }
 
     &__title {

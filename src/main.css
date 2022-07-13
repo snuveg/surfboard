@@ -568,7 +568,9 @@ p {
 .products__container {
   position: relative;
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  width: auto;
+  max-width: none; }
 .products__title {
   text-align: start;
   margin-top: 6.0555555556rem;

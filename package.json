@@ -1,0 +1,29 @@
+{
+  "name": "surfboard",
+  "version": "1.0.9",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snuveg/surfboard.git"
+  },
+  "keywords": [],
+  "author": "Evgeniy Vasilevskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snuveg/surfboard/issues"
+  },
+  "homepage": "https://github.com/snuveg/surfboard#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
